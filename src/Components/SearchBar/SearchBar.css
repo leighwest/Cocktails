@@ -1,0 +1,64 @@
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./stock-photo-two-mojito-cocktails-in-wide-composition-15851376731.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35rem;
+  }
+  
+  .SearchBar-field {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.88rem;
+  }
+  
+  .SearchBar-field input {
+    width: 21rem;
+    padding: .66rem 1rem;
+    margin-right: 2.22rem;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    font-size: .77rem;
+    font-weight: 500;
+  }
+  
+  .SearchBar-field input:last-child {
+    margin-right: 0;
+  }
+  
+  .SearchBar-submit {
+    text-align: center;
+  }
+  
+  .SearchBar-submit a {
+    border-radius: 4px;
+    padding: .72rem 1.7rem;
+    background-color: #aedb93;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background-color .5s;
+  }
+  
+  .SearchBar-submit a:hover {
+    cursor: pointer;
+    background-color: #78bd4f;
+  }
+  
+  @media only screen and (max-width: 560px) {
+    .SearchBar {
+      /* background-image: url('./background_search_mobile.jpg'); */
+    }
+  
+    
+    .SearchBar-field {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .SearchBar-field input {
+      margin-right: 0;
+      margin-bottom: .86rem;
+    }
+  }

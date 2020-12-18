@@ -1,0 +1,31 @@
+.Cocktail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16.66rem;
+    margin: 0 .5rem 2.3rem .5rem;
+  }
+  
+  .Cocktail .image-container {
+    height: 16.66rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Cocktail h2 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .Cocktail-information {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Cocktail-information p {
+    font-size: .88rem;
+    font-weight: 300;
+    line-height: 1rem;
+  }
+  
+ 
