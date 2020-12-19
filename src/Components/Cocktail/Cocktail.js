@@ -1,17 +1,12 @@
 import React from 'react';
 import './Cocktail.css';
 
-const cocktail = {
-    imageSrc: 'https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg',
-    name: 'Blue Margarita',
-    ingredients: ['1 1/2 oz Tequila', '1 oz Blue Curacao', '1 oz Lime juice', 'Coarse Salt'],
-    type: 'Ordinary Drink',
-    glass: 'Cocktail glass',
-    instructions: 'Shake tequila, blue curacao, and lime juice with ice, strain into the salt-rimmed glass, and serve.'
-};
+
 
 class Cocktail extends React.Component {
     render() {
+        const { cocktail } = this.props;
+        console.log({cocktail});
         return (
         <div className="Cocktail">
             <div className="image-container">
