@@ -4,10 +4,29 @@
     justify-content: space-between;
     width: 16.66rem;
     margin: 0 .5rem 2.3rem .5rem;
+    font-family: "Montserrat", sans-serif;
+    border: 1px solid #f2f8f9;
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+
+
+  }
+
+  .Cocktail:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    top: -8px;
+
+
+    
   }
   
   .Cocktail .image-container {
-    height: 16.66rem;
+    height: 16.45rem;
     margin-bottom: 1rem;
   }
   

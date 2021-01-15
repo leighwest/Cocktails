@@ -8,11 +8,8 @@ class CocktailList extends React.Component {
             <div className="CocktailList">
                 {
                     this.props.cocktails.map(cocktail => {
-                        return <Cocktail cocktail={cocktail} key={cocktail.id} />
+                        return <Cocktail cocktail={cocktail} key={cocktail.id} logThis={this.props.logThis}/>
                     })
-                    // <Cocktail cocktail={this.props.cocktails} />
-
-                   
                 }
             </div>
         );      

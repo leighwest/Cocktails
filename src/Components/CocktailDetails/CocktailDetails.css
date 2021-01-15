@@ -1,0 +1,31 @@
+.cocktail-details-wrapper {
+    font-family: "Montserrat", sans-serif;
+
+    padding: 5%;
+
+   background-color: rgb(46, 139, 87, 0.2);
+
+}
+
+.cocktail-details-content {
+    display: flex;
+    width: 1100px; 
+
+}
+
+.cocktail-details-image-container {
+    width: 85%;
+    /* height: 19.66rem; */
+
+
+}
+
+.cocktail-details-image-container img {
+    height: 19.66rem;
+
+}
+
+.cocktail-details-text {
+    padding-left: 5%;
+}
+
