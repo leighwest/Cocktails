@@ -1,44 +1,36 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './SearchBar.css';
 
-class SearchBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.inputElementRef = React.createRef();
-        this.state = {
-            term: ''
-        };
+const SearchBar = ({searchCocktails, value, changeVal}) => {
 
-        this.handleTermChange = this.handleTermChange.bind(this);
-        this.handleSearch = this.handleSearch.bind(this);
+    const inputElementRef = React.createRef();
+
+    useEffect(() => {
+        inputElementRef.current.focus();
+    },[]);
+
+    const handleTermChange = (event) =>  {
+        changeVal(event.target.value);
     }
 
-    componentDidMount() {
-        this.inputElementRef.current.focus();
-    }
-
-    handleTermChange(event) {
-        this.setState({ term: event.target.value });
-    }
-
-    handleSearch(event) {
-        this.props.searchCocktails(this.state.term);
+    const handleSearch = (event) => {
+        searchCocktails(value);
         event.preventDefault();  
     }
 
-    render() {
-        return(
-        <div className="SearchBar">
-            <div className="SearchBar-field">
-                <input placeholder="Search for a Drink" ref={this.inputElementRef} onChange={this.handleTermChange}/>
+    return(
+        <>
+            <h1>Cocktails</h1>
+            <div className="SearchBar">
+                <div className="SearchBar-field">
+                    <input placeholder="Search for a Drink" ref={inputElementRef} value={value} onChange={handleTermChange}/>
+                </div>
+                <div className="SearchBar-submit">
+                    <a onClick={handleSearch}>Let's Go</a>
+                </div>
             </div>
-            <div className="SearchBar-submit">
-                <a onClick={this.handleSearch}>Let's Go</a>
-            </div>
-        </div>
-        )
-
-    }
+        </>
+    )
 
 }
 

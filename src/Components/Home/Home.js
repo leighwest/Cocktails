@@ -1,6 +1,4 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-
+import React, {useState} from 'react';
 // import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import CocktailList from '../CocktailList/CocktailList';
@@ -13,50 +11,38 @@ import { Route } from 'react-router-dom';
 
 
 
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cocktails: []
-    };
+export const Home = () => {
+  const[cocktails, setCocktails] = useState([]);
+  const [value, changeVal] = useState('');
 
-  }
-
-  searchCocktails = (term) => {
+  const searchCocktails = (term) => {
     CocktailsDb.searchCocktailsDb(term).then(cocktails => {
-      this.setState({ cocktails: cocktails });  
+      setCocktails(cocktails);
     })
   }
 
-  render() {
-    return (
-        <div className="App">
-          <h1>Cocktails</h1>
-                    
-          <Route 
-            exact path="/" 
-            render={() => (
-                <SearchBar searchCocktails={this.searchCocktails} />
-            )}
-          />
-          <Route 
-            exact path="/" 
-            render={() => (
-                <CocktailList cocktails={this.state.cocktails}/>
-            )}
-          />
-          <Route 
-            path="/viewcocktail/:cocktailId" 
-            render={() => (
-                <CocktailDetails cocktail={this.state.cocktailDetails}/>
-            )}
-          />   
-          
-
-
-        </div>
-    );
-  }
+  return (
+      <div className="App">
+        <Route 
+          exact path="/" 
+          render={() => (
+              <SearchBar searchCocktails={searchCocktails} value={value} changeVal={changeVal}/>
+          )}
+        />
+        <Route 
+          exact path="/" 
+          render={() => (
+              <CocktailList cocktails={cocktails}/>
+          )}
+        />
+        <Route 
+          path="/viewcocktail/:cocktailId" 
+          render={() => (
+              <CocktailDetails/>
+          )}
+        />   
+      </div>
+  );
 }
 
 export default Home;

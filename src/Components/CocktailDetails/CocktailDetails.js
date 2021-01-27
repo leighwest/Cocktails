@@ -6,7 +6,7 @@ import CocktailsDb from '../../Util/CocktailsDb';
 const CocktailDetails = () => {
 
     const [cocktail, setCocktail] = useState({});
-    const [isLoading, toggleLoader] = useState(false);
+    const [isLoading, toggleLoader] = useState(true);
 
 
     useEffect(() => {
@@ -24,28 +24,30 @@ const CocktailDetails = () => {
                 <img src="/Spinner-1s-200px.gif" />
             ) : (
                     <div className="cocktail-details-wrapper">
-                        <h2>Recipe</h2>
+                        <div>
+                            <h2 className="cocktail-details-wrapper__heading">Recipe</h2>
+                            <div className="cocktail-details-content">
 
-                        <div className="cocktail-details-content">
+                                <div className="cocktail-details-image-container">
+                                    <img src={cocktail.imageSrc} alt='' className="cocktail-img"/>
+                                </div>
+                                <div className="cocktail-details-text">
+                                    <h2 className="cocktail-details-text__heading">{cocktail.name}</h2>
+                                    <p className="glass-type">{cocktail.glass}</p>
 
-                            <div className="cocktail-details-image-container">
-                                <img src={cocktail.imageSrc} alt='' />
-                            </div>
-                            <div className="cocktail-details-text">
-                                <h2>{cocktail.name}</h2>
-                                <p>{cocktail.glass}</p>
-
-                                <ul>
-                                    <li>{cocktail.ingredients}</li>
-                                </ul>
-                                <h3>Instructions:</h3>
-                                <p>{cocktail.instructions}</p>
-
-
-
-
+                                    <ul className="ingredients-list">
+                                        {cocktail.ingredients.map((itm,idx) => (
+                                            <>
+                                                {itm && <li key={idx}>{itm}</li>}
+                                            </>
+                                        ))}
+                                    </ul>
+                                    <h3 className="instructions-heading">Instructions:</h3>
+                                    <p className="instructions">{cocktail.instructions}</p>
+                                </div>
                             </div>
                         </div>
+                        
                     </div>
                 )}
 

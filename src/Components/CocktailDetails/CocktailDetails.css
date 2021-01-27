@@ -1,31 +1,54 @@
+.Cocktail-details {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cocktail-details-wrapper {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(46, 139, 87, 0.2);
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-    padding: 5%;
-
-   background-color: rgb(46, 139, 87, 0.2);
-
+.cocktail-details-wrapper__heading,
+.cocktail-details-text__heading,
+.glass-type {
+  margin-bottom: 20px;
 }
 
 .cocktail-details-content {
-    display: flex;
-    width: 1100px; 
-
-}
-
-.cocktail-details-image-container {
-    width: 85%;
-    /* height: 19.66rem; */
-
-
+  display: flex;
+  width: 1100px;
 }
 
 .cocktail-details-image-container img {
-    height: 19.66rem;
-
+  height: 19.66rem;
 }
 
 .cocktail-details-text {
-    padding-left: 5%;
+  padding-left: 5%;
 }
 
+.ingredients-list {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin-bottom: 40px;
+}
+.ingredients-list li {
+  margin-bottom: 10px;
+}
+.instructions-heading {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.instructions {
+  line-height: 1.3rem;
+}
+.cocktail-img {
+  border-radius: 20px;
+}
