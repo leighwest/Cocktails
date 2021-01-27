@@ -14,8 +14,11 @@ const SearchBar = ({searchCocktails, value, changeVal}) => {
     }
 
     const handleSearch = (event) => {
-        searchCocktails(value);
-        event.preventDefault();  
+        if (event.key === 'Enter' || event.type === 'click') {
+            searchCocktails(value);
+            event.preventDefault();  
+        }
+        
     }
 
     return(
@@ -23,7 +26,7 @@ const SearchBar = ({searchCocktails, value, changeVal}) => {
             <h1>Cocktails</h1>
             <div className="SearchBar">
                 <div className="SearchBar-field">
-                    <input placeholder="Search for a Drink" ref={inputElementRef} value={value} onChange={handleTermChange}/>
+                    <input placeholder="Search for a Drink" ref={inputElementRef} value={value} onChange={handleTermChange} onKeyDown={handleSearch}/>
                 </div>
                 <div className="SearchBar-submit">
                     <a onClick={handleSearch}>Let's Go</a>
