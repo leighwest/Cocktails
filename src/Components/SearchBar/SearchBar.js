@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './SearchBar.css';
 
 const SearchBar = ({searchCocktails, value, changeVal}) => {
@@ -7,7 +7,7 @@ const SearchBar = ({searchCocktails, value, changeVal}) => {
 
     useEffect(() => {
         inputElementRef.current.focus();
-    },[]);
+    }, []);
 
     const handleTermChange = (event) =>  {
         changeVal(event.target.value);
@@ -29,7 +29,7 @@ const SearchBar = ({searchCocktails, value, changeVal}) => {
                     <input placeholder="Search for a Drink" ref={inputElementRef} value={value} onChange={handleTermChange} onKeyDown={handleSearch}/>
                 </div>
                 <div className="SearchBar-submit">
-                    <a onClick={handleSearch}>Let's Go</a>
+                    <a onClick={handleSearch} href="/#">Let's Go</a>
                 </div>
             </div>
         </>

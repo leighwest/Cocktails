@@ -21,7 +21,7 @@ const CocktailDetails = () => {
     return (
         <div className="Cocktail-details">
             {isLoading ? (
-                <img src="/Spinner-1s-200px.gif" />
+                <img src="/Spinner-1s-200px.gif" alt="spinner"/>
             ) : (
                     <div className="cocktail-details-wrapper">
                         <div>
