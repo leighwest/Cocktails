@@ -20,7 +20,7 @@ The four screenshots below visualise the:
 
 ![](/screenshots/SearchResults.PNG?raw=true "Cocktail search results")
 
-### Accessing playlist in Spotify
+### Viewing the recipe page
 
 ![](/screenshots/RecipePage.PNG?raw=true "Recipe page")
 
