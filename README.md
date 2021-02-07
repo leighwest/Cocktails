@@ -2,7 +2,7 @@
 
 A React.js web application which utilises [The CocktailDB](https://www.thecocktaildb.com/api.php) developer API and enables users to search for cocktails and view their recipe. 
 
-You can view a live version of the app [here] (https://leigh-west-cocktails.web.app/).
+You can view a live version of the app [here](https://leigh-west-cocktails.web.app/).
 
 The four screenshots below visualise the:
    1) Landing page;
