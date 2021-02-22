@@ -4,13 +4,16 @@ A React.js web application which utilises [The CocktailDB](https://www.thecockta
 
 You can view a live version of the app [here](https://leigh-west-cocktails.web.app/).
 
+## Video Summary
+
+A short video summary detailing the technical and user features is available [here](https://vimeo.com/508677668) 
+
+## Screenshots
+
 The three screenshots below visualise the:
    1) Landing page;
    2) Search results; and 
    3) Recipe page.
-   
-
-## Screenshots
 
 ### Landing page
 
