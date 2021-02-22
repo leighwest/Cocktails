@@ -6,7 +6,7 @@ You can view a live version of the app [here](https://leigh-west-cocktails.web.a
 
 ## Video Summary
 
-A short video summary detailing the technical and user features is available [here](https://vimeo.com/508677668) 
+A short video summary detailing the technical and user features is available [here](https://vimeo.com/508677668).
 
 ## Screenshots
 
